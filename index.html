@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -244,7 +245,7 @@
       transition: all .2s;
     }
     .btn svg { width: 15px; height: 15px; stroke: currentColor; }
-    .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--cyan2)); color: #000; }
+    .btn-primary { background: var(--cyan); color: #000; }
     .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,212,255,.35); }
     .btn-secondary { background: transparent; color: var(--text2); border: 1px solid var(--border2); }
     .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
@@ -303,7 +304,7 @@
       width: 200px; height: 200px;
       border-radius: 50%;
       padding: 3px;
-      background: linear-gradient(135deg, var(--cyan), var(--violet));
+      background: var(--cyan);
     }
     .avatar-ring img {
       width: 100%; height: 100%;
@@ -344,10 +345,10 @@
     .stat-card::before {
       content:''; position:absolute; top:0; left:0; width:100%; height:2px;
     }
-    .stat-card.c::before { background:linear-gradient(90deg,var(--cyan),transparent); }
-    .stat-card.v::before { background:linear-gradient(90deg,var(--violet),transparent); }
-    .stat-card.g::before { background:linear-gradient(90deg,var(--green),transparent); }
-    .stat-card.a::before { background:linear-gradient(90deg,var(--amber),transparent); }
+    .stat-card.c::before { background: var(--cyan); }
+    .stat-card.v::before { background: var(--violet); }
+    .stat-card.g::before { background: var(--green); }
+    .stat-card.a::before { background: var(--amber); }
     .stat-card:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(0,212,255,.08); }
 
     .stat-icon {
@@ -410,7 +411,7 @@
     }
 
     /* ─── ══════  PROJECTS  ══════ ──────────────────────────────── */
-    #projects { background: linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%); }
+    #projects { background: var(--bg2); }
 
     .projects-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
 
@@ -599,7 +600,7 @@
     .timeline::before {
       content:''; position:absolute;
       left:0; top:0; bottom:0; width:1px;
-      background:linear-gradient(180deg,var(--cyan),transparent);
+      background: var(--border);
     }
     .tl-item  { position:relative; padding-bottom:28px; }
     .tl-item::before {
@@ -621,12 +622,8 @@
     }
     .profile-cover {
       height: 80px;
-      background: linear-gradient(135deg,var(--bg3),var(--bg2));
+      background: var(--bg3);
       position: relative;
-    }
-    .profile-cover::after {
-      content:''; position:absolute; inset:0;
-      background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(124,58,237,.15));
     }
     .profile-avatar {
       width:80px; height:80px;
@@ -684,10 +681,7 @@
     }
     .contact-left h3 em {
       font-style:normal;
-      background:linear-gradient(90deg,var(--cyan),var(--violet));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
+      color: var(--cyan);
     }
     .contact-left p {
       font-size:15px; color:var(--text2);
@@ -741,8 +735,8 @@
     }
 
     .cta-box {
-      background:linear-gradient(135deg,rgba(0,212,255,.08),rgba(124,58,237,.08));
-      border:1px solid rgba(0,212,255,.2);
+      background: var(--bg3);
+      border:1px solid var(--border2);
       border-radius:var(--radius);
       padding:24px; text-align:center;
     }
@@ -820,10 +814,9 @@
       <div class="hero-content">
         <div class="hero-eyebrow reveal">Data Analyst · Nairobi, Kenya</div>
         <h1 class="hero-name reveal" style="transition-delay:.08s">Monica Masae</h1>
-        <div class="hero-title reveal" style="transition-delay:.14s">Turning Raw Data into Business Intelligence</div>
+        <div class="hero-title reveal" style="transition-delay:.14s">Data Analyst · SQL, Python, R, Power BI</div>
         <p class="hero-tagline reveal" style="transition-delay:.20s">
-          Fintech-trained data analyst who transforms messy transaction records and business datasets into
-          executive-ready dashboards, automated reports, and actionable insights — using SQL, Python, R, and the full BI stack.
+          I work with transaction data, financial records, and business datasets to build dashboards, automate reports, and pull out the numbers that actually matter. Based in Nairobi, with hands-on fintech experience.
         </p>
         <div class="hero-badges stagger">
           <span class="badge badge-cyan">SQL Advanced</span>
@@ -972,16 +965,16 @@
           <span class="badge badge-cyan">Finance</span>
         </div>
         <div class="pc-body">
-          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">A multi-store bike retailer lacked visibility into which products, regions, and customer segments were actually driving revenue — making it impossible to plan inventory or set quarterly targets.</span></div>
-          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Multi-table relational database: orders, customers, products, stores, and sales reps across multiple years.</span></div>
-          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Designed complex SQL queries using CTEs and window functions to join 5+ tables, calculate month-over-month growth rates, and produce variance analysis comparing actual vs. prior-period revenue.</span></div>
+          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">A multi-store bike retailer had no clear view of which products, regions, or customers were driving revenue. Planning inventory and setting targets was guesswork.</span></div>
+          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Relational database with tables for orders, customers, products, stores, and sales reps spanning multiple years.</span></div>
+          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Wrote SQL queries using CTEs and window functions across 5+ tables to track monthly growth and compare revenue against prior periods.</span></div>
           <div class="insight-box">
             <span class="label">Key Insight</span>
-            A small subset of customers (top 20%) accounted for over 60% of total revenue — enabling the business to prioritise retention strategies for high-value segments over broad acquisition spend.
+            The top 20% of customers brought in over 60% of total revenue. That split made a strong case for focusing retention spend on existing high-value buyers rather than broad acquisition.
           </div>
           <div class="impact-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Board-ready reporting delivered with optimised queries
+            Clean, optimised queries delivered directly to board reporting
           </div>
           <div class="pc-tools">
             <span class="tool-pill">PostgreSQL</span><span class="tool-pill">CTEs</span>
@@ -1006,16 +999,16 @@
           <span class="badge badge-violet">BI Dashboard</span>
         </div>
         <div class="pc-body">
-          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">Leadership had no interactive way to explore profitability by category, region, or time period — all analysis required manual Excel work with no self-service capability.</span></div>
-          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Superstore transactional dataset with 10,000+ rows spanning orders, returns, shipping, product categories, and geographic regions.</span></div>
-          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Cleaned and modelled data using dplyr and tidyr; built an R Shiny app with dynamic filters, KPI cards, and interactive charts enabling leadership to self-serve year-over-year trend analysis.</span></div>
+          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">Every profitability question required a manual Excel file. Leadership had no way to cut the data themselves by category, region, or time period.</span></div>
+          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Superstore transactional dataset, 10,000+ rows covering orders, returns, shipping, product categories, and regions.</span></div>
+          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Cleaned and shaped the data with dplyr and tidyr, then built an R Shiny app with filters, KPI cards, and charts so leadership could explore year-on-year trends without needing help.</span></div>
           <div class="insight-box" style="border-left-color:#a78bfa">
             <span class="label" style="color:#a78bfa">Key Insight</span>
-            Certain sub-categories (e.g. Tables) showed consistent negative profit margins despite high sales volume — a loss invisible in aggregate reporting but surfaced clearly in the interactive drilldown.
+            Some sub-categories like Tables had strong sales volume but were consistently losing money. That only became visible once you looked at profit per category rather than just total revenue.
           </div>
           <div class="impact-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Eliminated manual reporting cycles for leadership team
+            Leadership stopped relying on manual Excel reports
           </div>
           <div class="pc-tools">
             <span class="tool-pill">R</span><span class="tool-pill">dplyr</span>
@@ -1040,16 +1033,16 @@
           <span class="badge badge-green">Forecasting</span>
         </div>
         <div class="pc-body">
-          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">Freelance professionals struggle to plan finances due to unpredictable income — without understanding seasonality and regional demand, they can't optimise pricing or availability strategy.</span></div>
-          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Multi-year earnings records across categories, regions, and time periods with client and project metadata.</span></div>
-          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Used Pandas for feature engineering and aggregation; applied statistical analysis to detect seasonality, earning peaks, and regional demand variations; automated report generation with Matplotlib visualisations.</span></div>
+          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">Freelance income is unpredictable and hard to plan around. Most freelancers react to slow months rather than anticipating them.</span></div>
+          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Several years of earnings data broken down by category, region, time period, and project type.</span></div>
+          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Used Pandas to aggregate and reshape the data, ran rolling averages and seasonal comparisons in Python, and automated a monthly summary report with Matplotlib charts.</span></div>
           <div class="insight-box" style="border-left-color:var(--green)">
             <span class="label" style="color:var(--green)">Key Insight</span>
-            Q1 consistently underperformed by ~25% vs. Q3 peak — a seasonal pattern that, once quantified, allowed freelancers to build cash buffers and front-load higher-rate projects during peak demand windows.
+            Q1 was consistently about 25% below the annual average, every year. Knowing that in advance means a freelancer can set aside cash in Q4 instead of scrambling in January.
           </div>
           <div class="impact-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Automated report generation reduced manual analysis time
+            Monthly reports generated automatically, no manual work needed
           </div>
           <div class="pc-tools">
             <span class="tool-pill">Python</span><span class="tool-pill">Pandas</span>
@@ -1074,16 +1067,16 @@
           <span class="badge badge-amber">Public Sector</span>
         </div>
         <div class="pc-body">
-          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">Education planners lacked a unified view of resource distribution across schools and regions — making it impossible to identify underserved areas or rank schools by need objectively.</span></div>
-          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Multiple integrated data sources: school enrolment figures, teacher-to-student ratios, facility scores, and geographic data by district.</span></div>
-          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Designed a KPI framework and ranking algorithm to score schools by resource need; built a Streamlit app with Plotly interactive charts and dynamic filters for real-time self-service exploration.</span></div>
+          <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">Education planners had no single view of how resources were spread across schools. Identifying which schools needed the most support was largely subjective.</span></div>
+          <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">School enrolment figures, teacher-to-student ratios, facility condition scores, and district-level geographic data from multiple sources.</span></div>
+          <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Built a scoring and ranking model to rate schools by need, then wrapped it in a Streamlit app with Plotly charts so planners could filter by region and explore the data themselves.</span></div>
           <div class="insight-box" style="border-left-color:var(--amber)">
             <span class="label" style="color:var(--amber)">Key Insight</span>
-            Resource allocation was historically skewed toward schools with stronger administrative advocacy — the ranking algorithm surfaced a cluster of high-enrolment, low-resource rural schools being systematically overlooked.
+            Schools with vocal administrators tended to get the most attention. The ranking model flagged a group of high-enrolment rural schools with poor facilities that had been consistently passed over.
           </div>
           <div class="impact-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Enabled data-driven, objective resource prioritisation
+            Resource decisions could now be backed by numbers, not just advocacy
           </div>
           <div class="pc-tools">
             <span class="tool-pill">Python</span><span class="tool-pill">Streamlit</span>
@@ -1101,7 +1094,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
             </div>
             <div>
-              <div class="pc-title">Fintech Transaction Analytics — DCASH Africa</div>
+              <div class="pc-title">Fintech Transaction Analytics, DCASH Africa</div>
               <div class="pc-subtitle">Financial Analytics · Reconciliation · SQL · Python</div>
             </div>
           </div>
@@ -1110,14 +1103,14 @@
         <div class="pc-body">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
             <div>
-              <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">A fintech startup needed daily liquidity intelligence and cross-border pricing optimisation across M-Pesa and Airtel Money channels — with zero tolerance for balance discrepancies.</span></div>
-              <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Live transaction databases: M-Pesa statements, Airtel Money records, internal ledgers, USD/KES FX rate feeds, and daily deposit/withdrawal logs.</span></div>
-              <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Wrote SQL queries to surface deposit/withdrawal volume trends; built automated Python + Excel pipelines for weekly reporting; performed daily reconciliation between external payment provider statements and internal systems.</span></div>
+              <div class="pc-row"><span class="pc-key">Problem</span><span class="pc-val">The team needed a daily view of liquidity across M-Pesa and Airtel Money, and had to keep user balances accurate with no room for error.</span></div>
+              <div class="pc-row"><span class="pc-key">Dataset</span><span class="pc-val">Live M-Pesa and Airtel Money statements, internal ledgers, USD/KES exchange rate feeds, and daily deposit and withdrawal logs.</span></div>
+              <div class="pc-row"><span class="pc-key">Approach</span><span class="pc-val">Queried transaction databases in SQL to track volume trends, built Python and Excel pipelines for weekly reports, and ran daily reconciliation between provider statements and internal records.</span></div>
             </div>
             <div>
               <div class="insight-box" style="border-left-color:var(--rose)">
                 <span class="label" style="color:var(--rose)">Key Insight</span>
-                FX spread margin analysis revealed pricing inefficiencies during specific market windows — data-driven recommendations enabled the platform to adjust spreads dynamically, protecting margins on cross-border transfers.
+                Looking at FX spread margins against transaction timestamps showed that a fixed spread was costing the platform money during volatile trading windows. The data supported switching to a variable spread during those periods.
               </div>
               <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
                 <div class="impact-badge">
@@ -1153,7 +1146,7 @@
       <h2 class="section-title">Analytical Thinking in Practice</h2>
     </div>
     <p class="reveal" style="color:var(--text2);font-size:14px;margin-bottom:36px;max-width:600px;transition-delay:.08s">
-      Short investigations and micro-analyses that show how I approach real-world data questions — the reasoning, not just the result.
+      Short write-ups on real data problems. The focus is on how I think through a question, not just what the answer was.
     </p>
 
     <div class="bites-grid stagger">
@@ -1161,62 +1154,62 @@
       <div class="bite-card">
         <span class="bite-tag" style="background:rgba(0,212,255,.1);color:var(--cyan);border:1px solid rgba(0,212,255,.25)">Fintech · FX</span>
         <div class="bite-question">Why do mobile money platforms lose margin during high-volatility FX sessions?</div>
-        <div class="bite-body">When USD/KES rates move sharply intraday, fixed-spread pricing creates asymmetric risk — the platform buys at a worse rate than customers are quoted. By mapping transaction timestamps against FX tick data, I identified that ~30% of cross-border volume clustered in the 90-minute window after Nairobi market open — the highest-volatility period.</div>
+        <div class="bite-body">When the USD/KES rate swings intraday, a fixed spread means the platform is selling at a rate it locked in before the move. Matching transaction timestamps to FX tick data showed that around 30% of cross-border volume happened in the 90 minutes after the Nairobi market opened, which is typically the most volatile window.</div>
         <div class="bite-finding" style="border-color:var(--cyan)">
           <span class="find-label" style="color:var(--cyan)">Finding</span>
           <span class="metric-highlight" style="color:var(--cyan)">~30%</span>
-          <div class="find-text">of cross-border volume occurs during peak FX volatility — a dynamic spread mechanism would protect margins without affecting most users.</div>
+          <div class="find-text">of cross-border volume falls in the peak volatility window. Adjusting the spread during that window would protect margins for the majority of transfers.</div>
         </div>
       </div>
 
       <div class="bite-card">
         <span class="bite-tag" style="background:rgba(124,58,237,.1);color:#a78bfa;border:1px solid rgba(124,58,237,.25)">Retail · Profitability</span>
         <div class="bite-question">Can a product generate high revenue but negative profit? How do you catch it?</div>
-        <div class="bite-body">Aggregate dashboards flatten margins — a product with 40% of sales but thin or negative margins looks fine in a revenue summary. The fix is building a profitability view alongside revenue: <code style="font-family:var(--mono);font-size:12px;color:var(--cyan)">SUM(profit)/SUM(sales)</code> segmented by sub-category, with conditional formatting to flag anything below a threshold.</div>
+        <div class="bite-body">A revenue-only view hides margin problems. A product can move a lot of units but still cost the business money if the margin is negative. Adding a profit rate column (<code style="font-family:var(--mono);font-size:12px;color:var(--cyan)">SUM(profit)/SUM(sales)</code>) broken out by sub-category, with a threshold flag, makes these cases easy to spot.</div>
         <div class="bite-finding" style="border-color:#a78bfa">
           <span class="find-label" style="color:#a78bfa">Finding</span>
-          <div class="find-text">In the Superstore dataset, the "Tables" sub-category had high sales rank but was one of the worst profit contributors — invisible without a margin-first view.</div>
+          <div class="find-text">In the Superstore dataset, Tables ranked high on sales but were actually losing money. It only showed up once I looked at profit rate per category rather than total revenue.</div>
         </div>
       </div>
 
       <div class="bite-card">
         <span class="bite-tag" style="background:rgba(16,185,129,.1);color:var(--green);border:1px solid rgba(16,185,129,.25)">Income · Seasonality</span>
         <div class="bite-question">How can a freelancer use data to smooth out income volatility?</div>
-        <div class="bite-body">Most freelancers track earnings reactively — they know Q1 was slow but don't know <em>why</em> or <em>by how much</em>. By indexing monthly earnings to the annual mean and computing rolling 3-month averages, clear seasonal patterns emerge that can inform pricing, pipeline management, and savings strategy.</div>
+        <div class="bite-body">Most freelancers know when a bad month happened but have no idea whether it was unusual or part of a pattern. Indexing monthly earnings against the annual average and running 3-month rolling averages makes the seasonal shape visible and repeatable.</div>
         <div class="bite-finding" style="border-color:var(--green)">
           <span class="find-label" style="color:var(--green)">Finding</span>
-          <span class="metric-highlight" style="color:var(--green)">−25%</span>
-          <div class="find-text">Q1 earnings consistently fell ~25% below annual average — predictable enough to plan against with a 2-month cash buffer and pre-booked Q4 retainers.</div>
+          <span class="metric-highlight" style="color:var(--green)">-25%</span>
+          <div class="find-text">Q1 consistently came in about 25% below the annual average. That is a predictable enough pattern to plan around: build a cash buffer in Q4 and lock in retainer work before January.</div>
         </div>
       </div>
 
       <div class="bite-card">
         <span class="bite-tag" style="background:rgba(245,158,11,.1);color:var(--amber);border:1px solid rgba(245,158,11,.25)">SQL · Technique</span>
         <div class="bite-question">When should you use a window function instead of a GROUP BY?</div>
-        <div class="bite-body">GROUP BY collapses rows — you lose access to row-level context. Window functions let you compute aggregates <em>alongside</em> the original detail. For revenue analysis: running totals, rank within group, or period-over-period % change are all cleaner as window functions. Example: <code style="font-family:var(--mono);font-size:12px;color:var(--amber)">LAG(revenue,1) OVER (PARTITION BY region ORDER BY month)</code>.</div>
+        <div class="bite-body">GROUP BY collapses your rows into a summary. Once you group, you lose the row-level detail. Window functions let you calculate things like running totals, ranks, or month-on-month change while keeping every row intact. Example: <code style="font-family:var(--mono);font-size:12px;color:var(--amber)">LAG(revenue,1) OVER (PARTITION BY region ORDER BY month)</code>.</div>
         <div class="bite-finding" style="border-color:var(--amber)">
           <span class="find-label" style="color:var(--amber)">Rule of Thumb</span>
-          <div class="find-text">If you need aggregation <em>and</em> row detail together — reach for a window function. If you only need the summary — GROUP BY is cleaner and faster.</div>
+          <div class="find-text">If you need both the aggregate and the original rows in the same result set, use a window function. If you just need the summary, GROUP BY is simpler and usually faster.</div>
         </div>
       </div>
 
       <div class="bite-card">
         <span class="bite-tag" style="background:rgba(244,63,94,.1);color:var(--rose);border:1px solid rgba(244,63,94,.25)">Reconciliation · Ops</span>
         <div class="bite-question">What does 100% reconciliation accuracy actually require operationally?</div>
-        <div class="bite-body">Daily reconciliation between M-Pesa/Airtel statements and internal ledgers isn't just a matching exercise — it's a data pipeline. You need consistent field mapping, handling of pending/reversed transactions, duplicate detection, and a clear escalation path for discrepancies. Automating the delta report makes exceptions visible immediately rather than accumulating.</div>
+        <div class="bite-body">Reconciliation is more than matching numbers. You need consistent field mapping, logic for pending and reversed transactions, duplicate detection, and a clear process for anything that does not match. The key is automating a daily exceptions report so mismatches are visible the same day, not after they stack up.</div>
         <div class="bite-finding" style="border-color:var(--rose)">
           <span class="find-label" style="color:var(--rose)">Practice</span>
-          <div class="find-text">Discrepancies resolved within 24 hours at DCASH Africa by building a daily SQL exception report that flagged any transaction where provider record ≠ internal balance update.</div>
+          <div class="find-text">At DCASH Africa, a daily SQL report flagged any transaction where the provider record did not match the internal ledger. Mismatches were investigated and resolved within 24 hours.</div>
         </div>
       </div>
 
       <div class="bite-card">
         <span class="bite-tag" style="background:rgba(0,212,255,.1);color:var(--cyan);border:1px solid rgba(0,212,255,.25)">KPI Design</span>
         <div class="bite-question">How do you build a KPI framework that actually connects to business goals?</div>
-        <div class="bite-body">Most dashboards measure activity, not outcomes. A proper KPI framework starts with a business goal, then works backwards: what leading indicators predict that outcome? What operational metrics drive those indicators? The result is a metrics tree — not a list of numbers, but a causal chain.</div>
+        <div class="bite-body">Most dashboards count things without asking whether those things matter. A useful KPI structure starts from the business goal and works backwards: what would tell us we are on track? What day-to-day metric feeds that? Where does the data come from? That way every number on the dashboard has a clear reason to be there.</div>
         <div class="bite-finding" style="border-color:var(--cyan)">
-          <span class="find-label" style="color:var(--cyan)">Framework</span>
-          <div class="find-text">Goal → Outcome metric → Leading indicator → Operational metric → Data source. Used this structure in both the EduMap dashboard and client BI engagements.</div>
+          <span class="find-label" style="color:var(--cyan)">Structure</span>
+          <div class="find-text">Goal, then outcome metric, then leading indicator, then operational metric, then data source. I used this structure on the EduMap dashboard and in client engagements.</div>
         </div>
       </div>
 
@@ -1245,10 +1238,10 @@
             <div class="sg-count">Advanced proficiency</div>
           </div>
         </div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">SQL (CTEs, Window Functions, JOINs)</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%;background:linear-gradient(90deg,var(--cyan),var(--cyan2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">PostgreSQL</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%;background:linear-gradient(90deg,var(--cyan),var(--cyan2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">MySQL</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:78%;background:linear-gradient(90deg,var(--cyan),var(--cyan2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Query Optimisation &amp; Indexing</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:75%;background:linear-gradient(90deg,var(--cyan),var(--cyan2))"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">SQL (CTEs, Window Functions, JOINs)</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%;background:var(--cyan)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">PostgreSQL</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%;background:var(--cyan)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">MySQL</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:78%;background:var(--cyan)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Query Optimisation &amp; Indexing</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:75%;background:var(--cyan)"></div></div></div>
       </div>
 
       <div class="skill-group reveal reveal-right">
@@ -1261,9 +1254,9 @@
             <div class="sg-count">Multi-language</div>
           </div>
         </div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Python (Pandas, NumPy, Scikit-learn)</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:82%;background:linear-gradient(90deg,#a78bfa,var(--violet2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">R (dplyr, tidyr, ggplot2, Shiny)</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%;background:linear-gradient(90deg,#a78bfa,var(--violet2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Excel (Power Query, Advanced Formulas)</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:90%;background:linear-gradient(90deg,#a78bfa,var(--violet2))"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Python (Pandas, NumPy, Scikit-learn)</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:82%;background:#a78bfa"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">R (dplyr, tidyr, ggplot2, Shiny)</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%;background:#a78bfa"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Excel (Power Query, Advanced Formulas)</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:90%;background:#a78bfa"></div></div></div>
       </div>
 
       <div class="skill-group reveal reveal-left" style="transition-delay:.1s">
@@ -1276,10 +1269,10 @@
             <div class="sg-count">Full BI stack</div>
           </div>
         </div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Power BI</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%;background:linear-gradient(90deg,var(--green),var(--green2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Tableau</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:78%;background:linear-gradient(90deg,var(--green),var(--green2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">R Shiny / Streamlit / Plotly</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%;background:linear-gradient(90deg,var(--green),var(--green2))"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Looker · Matplotlib · Seaborn</span><span class="skill-level">Working knowledge</span></div><div class="skill-bar"><div class="skill-fill" style="width:68%;background:linear-gradient(90deg,var(--green),var(--green2))"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Power BI</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%;background:var(--green)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Tableau</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:78%;background:var(--green)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">R Shiny / Streamlit / Plotly</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%;background:var(--green)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Looker · Matplotlib · Seaborn</span><span class="skill-level">Working knowledge</span></div><div class="skill-bar"><div class="skill-fill" style="width:68%;background:var(--green)"></div></div></div>
       </div>
 
       <div class="skill-group reveal reveal-right" style="transition-delay:.1s">
@@ -1292,10 +1285,10 @@
             <div class="sg-count">Domain expertise</div>
           </div>
         </div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Financial Analytics &amp; Reporting</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%;background:linear-gradient(90deg,var(--amber),#d97706)"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">KPI Framework Design</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:82%;background:linear-gradient(90deg,var(--amber),#d97706)"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Statistical Analysis &amp; Trend Analysis</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:78%;background:linear-gradient(90deg,var(--amber),#d97706)"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Machine Learning (Scikit-learn)</span><span class="skill-level">Developing</span></div><div class="skill-bar"><div class="skill-fill" style="width:55%;background:linear-gradient(90deg,var(--amber),#d97706)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Financial Analytics &amp; Reporting</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%;background:var(--amber)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">KPI Framework Design</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:82%;background:var(--amber)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Statistical Analysis &amp; Trend Analysis</span><span class="skill-level">Proficient</span></div><div class="skill-bar"><div class="skill-fill" style="width:78%;background:var(--amber)"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Machine Learning (Scikit-learn)</span><span class="skill-level">Developing</span></div><div class="skill-bar"><div class="skill-fill" style="width:55%;background:var(--amber)"></div></div></div>
       </div>
 
       <div class="skill-group reveal" style="grid-column:1/-1;transition-delay:.15s">
@@ -1340,46 +1333,46 @@
 
     <div class="about-layout">
       <div class="about-story reveal reveal-left">
-        <h3>From questions to answers — one query at a time.</h3>
+        <h3>How I got into data</h3>
 
-        <p>My path into data didn't start with a textbook — it started with a question: <strong>"why does this number look wrong?"</strong> As a technical writer at Section.io, I was translating complex data concepts for 30,000+ readers, and I realised that the people who made the most impact weren't just the ones who ran the analysis — they were the ones who could explain it clearly and act on it decisively.</p>
+        <p>I started as a technical writer at Section.io, writing about data analytics for developers. That work taught me how to explain technical topics clearly, but it also made me want to do the analysis myself rather than just describe it.</p>
 
-        <p>That insight pushed me deeper. I completed a Certificate of Excellence in Software Development at Moringa School, built a freelance analytics practice serving clients across finance and operations, and landed at <strong>DCASH Africa</strong> — a fintech startup — where I got to stress-test everything I'd learned on live production data: daily reconciliation, liquidity analysis, FX spread modelling, and automated reporting pipelines that stakeholders actually relied on.</p>
+        <p>I built up my skills through a software development programme at Moringa School and freelance analytics work for clients in finance and operations. In 2025 I joined <strong>DCASH Africa</strong>, a fintech startup, where I worked with live production data: daily reconciliation across M-Pesa and Airtel Money, FX spread analysis, liquidity tracking, and weekly reporting pipelines.</p>
 
-        <p>Today I'm pursuing a <strong>BSc in Data Science</strong> at the Open University of Kenya (expected 2026) while continuing to build real-world analytics projects. The problems I'm most drawn to sit at the intersection of <strong>financial data and operational decision-making</strong> — where good analysis can directly change how a business allocates resources, prices a product, or plans for the future.</p>
+        <p>I am currently finishing a <strong>BSc in Data Science</strong> at the Open University of Kenya (expected 2026). The work I find most interesting is in <strong>financial and operational data</strong>, where the analysis connects directly to decisions around pricing, planning, and resource use.</p>
 
-        <p>I'm based in <strong>Nairobi, Kenya</strong>, actively looking for my next data analyst role where the data is messy, the stakeholders are demanding, and the insights actually matter.</p>
+        <p>I am based in <strong>Nairobi, Kenya</strong> and looking for a data analyst role where the problems are real and the work matters.</p>
 
         <div class="timeline">
           <div class="tl-item">
             <div class="tl-year">2021 – 2022</div>
-            <div class="tl-title">Moringa School — Certificate of Excellence in Software Development</div>
-            <div class="tl-desc">Built programming foundations; awarded Certificate of Excellence.</div>
+            <div class="tl-title">Moringa School, Certificate of Excellence in Software Development</div>
+            <div class="tl-desc">Built programming foundations. Awarded Certificate of Excellence on completion.</div>
           </div>
           <div class="tl-item">
             <div class="tl-year">2021 – 2023</div>
-            <div class="tl-title">Section.io — Technical Writer &amp; Peer Reviewer</div>
-            <div class="tl-desc">Authored data analytics articles reaching 30,000+ readers. Learned to translate complexity into clarity.</div>
+            <div class="tl-title">Section.io, Technical Writer and Peer Reviewer</div>
+            <div class="tl-desc">Wrote data analytics articles read by 30,000+ people. Developed a habit of explaining technical ideas without jargon.</div>
           </div>
           <div class="tl-item">
             <div class="tl-year">2021 – Present</div>
             <div class="tl-title">Freelance Data Analyst</div>
-            <div class="tl-desc">Delivered financial analytics, executive dashboards, and KPI frameworks for multiple clients across industries.</div>
+            <div class="tl-desc">Built dashboards, ran financial analysis, and designed KPI structures for clients in finance and operations.</div>
           </div>
           <div class="tl-item">
             <div class="tl-year">2020 – 2022</div>
-            <div class="tl-title">University of Nairobi — Diploma in Project Planning &amp; Management</div>
-            <div class="tl-desc">Developed project management and stakeholder communication skills.</div>
+            <div class="tl-title">University of Nairobi, Diploma in Project Planning and Management</div>
+            <div class="tl-desc">Covered project planning, resource management, and working with stakeholders.</div>
           </div>
           <div class="tl-item">
             <div class="tl-year">2025</div>
-            <div class="tl-title">DCASH Africa — Data Analyst Intern</div>
-            <div class="tl-desc">Production fintech analytics: reconciliation, liquidity planning, FX analysis, automated reporting.</div>
+            <div class="tl-title">DCASH Africa, Data Analyst Intern</div>
+            <div class="tl-desc">Daily reconciliation, liquidity tracking, FX spread analysis, and automated weekly reporting on live production data.</div>
           </div>
           <div class="tl-item">
             <div class="tl-year">2024 – 2026</div>
-            <div class="tl-title">Open University of Kenya — BSc Data Science</div>
-            <div class="tl-desc">Statistical modelling · Financial analytics · Machine learning · Database management</div>
+            <div class="tl-title">Open University of Kenya, BSc Data Science</div>
+            <div class="tl-desc">Statistical modelling, financial analytics, machine learning, and database management.</div>
           </div>
         </div>
       </div>
@@ -1461,8 +1454,8 @@
 
     <div class="contact-layout">
       <div class="contact-left reveal reveal-left">
-        <h3>Let's build something<br /><em>data-driven</em> together.</h3>
-        <p>I'm actively looking for data analyst roles in fintech, finance, and operations analytics. If you have messy data that needs to make sense, dashboards that need to actually get used, or reports that should basically write themselves — let's talk.</p>
+        <h3>Looking for your next<br /><em>data analyst?</em></h3>
+        <p>I am actively looking for data analyst roles in fintech, finance, and operations. If you need someone to clean up your data, build a dashboard that people will actually use, or automate a report that currently takes hours every week, feel free to reach out.</p>
 
         <div class="contact-links">
           <a class="contact-link" href="mailto:monica.w.masae@gmail.com">
@@ -1521,8 +1514,8 @@
         </div>
 
         <div class="cta-box">
-          <h4>Ready to solve data problems?</h4>
-          <p>Whether it's a dashboard that needs building, data that needs cleaning, or insights that need surfacing — I'm available immediately and ready to contribute from day one.</p>
+          <h4>Available now</h4>
+          <p>I can start immediately and hit the ground running. Get in touch and let's talk about what you need.</p>
           <a class="btn btn-primary" href="mailto:monica.w.masae@gmail.com" style="display:inline-flex">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             Send a Message
@@ -1537,7 +1530,7 @@
 <!-- ─────────────────────── FOOTER ───────────────────────────── -->
 <footer>
   <div>Monica Masae · Data Analyst · Nairobi, Kenya &nbsp;·&nbsp; monica.w.masae@gmail.com &nbsp;·&nbsp; github.com/M0nicah</div>
-  <div style="margin-top:8px;color:var(--border2)">Built with data. Designed for impact. &nbsp;// &nbsp;© 2025</div>
+  <div style="margin-top:8px;color:var(--border2)">© 2025</div>
 </footer>
 
 
